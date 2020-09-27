@@ -8,5 +8,8 @@
     "start": "node index"
   },
   "author": "Shubham Jha",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "requests": "^0.3.0"
+  }
 }

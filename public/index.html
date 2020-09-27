@@ -3,9 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClimaX - Dynamic Weather App</title>
+    <title>ClimaX - मौसम का हाल</title>
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" />
+
+    <!-- Google Fonts (Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>ClimaX</h1>
+    <nav class="navbar">
+        <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fas fa-bars"></i>
+        </span>
+        <a href="#" class="logo">ClimaX - मौसम का हाल</a>
+        <ul class="main-nav" id="js-menu">
+            <li>
+                <a href="#" class="nav-links">Home</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">Link 1</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">Link 2</a>
+            </li>
+            <li>
+                <a href="#" class="nav-links">Toggle Theme</a>
+            </li>
+        </ul>
+    </nav>
+    
+    <div class="wrap">
+        <div class="box">
+            <div class="wave -one"></div>
+            <div class="wave -two"></div>
+            <div class="wave -three"></div>
+
+            <div id="weather-condition">
+                <i class="fas fa-sun" style="color: #ffa700"></i>
+            </div>
+
+            <div class="weather-info">
+                <h2 class="location"><i class="fas fa-map-marker-alt"></i> Kolkata, IN</h2>
+                <p id="date"></p>
+                <h1 class="temperature">26.49°C</h1>
+                <h3 class="min-max-temp">Min : 26.49°C  |  Max : 26.49°C</h3>
+            </div>
+        </div>
+
+    </div>
+    <!-- Script -->
+    <script src="app.js"></script>
+
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </body>
 </html>

@@ -343,20 +343,34 @@
         let mainNav = document.getElementById('js-menu');
         let navBarToggle = document.getElementById('js-navbar-toggle');
 
+        // Toggle Theme : Light -> Dark
         function toggleTheme() {
             var themeToggle = document.getElementById('wrapper');
             themeToggle.classList.toggle("dark-mode");
         }
 
         navBarToggle.addEventListener('click', function () {
-            
             mainNav.classList.toggle('active');
         });
 
         const curDate = document.getElementById("date");
         let weatherCondition = document.getElementById("weather-condition");
 
-        const temp = "Clouds";
+        const tempStatus = "{%tempStatus%}";
+
+        // Weather Condition as per the Temperature Status
+        if (tempStatus == "Sunny") {
+            weatherCondition.innerHTML = "<i class='fas fa-sun' style='color: #ffa700'></i>";
+        }
+        else if (tempStatus == "Clouds") {
+            weatherCondition.innerHTML = "<i class='fas fa-cloud' style='color: #dfe5ea'></i>";
+        }
+        else if (tempStatus == "Rainy") {
+            weatherCondition.innerHTML = "<i class='fas fa-cloud-rain' style='color: #a4b0be'></i>";
+        }
+        else {
+            weatherCondition.innerHTML = "<i class='fas fa-cloud' style='color: #dfe5ea'></i>";
+        }
 
         const getCurrentDay = () => {
             let currentTime = new Date();

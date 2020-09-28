@@ -28,7 +28,7 @@
             background: whitesmoke;
             align-items: center;
             flex-wrap: wrap;
-            height: 90.5vh;
+            height: 72vh;
             width: 100vw;
         }
 
@@ -174,7 +174,7 @@
         }
 
         .dark-mode {
-            background: black;
+            background: black !important;
         }
 
         @media (max-width: 600px) {
@@ -294,6 +294,43 @@
                 font-size: 25px;
             }
         }
+
+        /* Search Bar*/
+        .sb-example-1 {
+            background: whitesmoke;
+            padding: 65px 65px 25px 65px;
+        }
+
+        .sb-example-1 .search {
+            width: 250px;
+            position: relative;
+            display: flex;
+        }
+        .sb-example-1 .searchTerm {
+            width: 100%;
+            border: 3px solid #00B4CC;
+            border-right: none;
+            padding: 5px;
+            border-radius: 25px;
+            outline: none;
+            color: #9DBFAF;
+        }
+        .sb-example-1 .searchTerm:focus{
+            color: #00B4CC;
+        }
+        .sb-example-1 .searchButton {
+            width: 40px;
+            height: 50px;
+            border: 1px solid #00B4CC;
+            background: #00B4CC;
+            text-align: center;
+            color: #fff;
+            border-radius: 25px;
+            cursor: pointer;
+            padding: 0 10px;
+            margin-left: 6px;
+            font-size: 20px;
+        }
     </style>
 </head>
 
@@ -318,8 +355,18 @@
             </li>
         </ul>
     </nav>
-    
+
+    <div id="searchBarSB" class="sb-example-1">
+        <div class="search">
+           <input type="text" class="searchTerm" placeholder="Make a Search">
+           <button type="submit" class="searchButton">
+             <i class="fa fa-search"></i>
+          </button>
+        </div>
+    </div>
+
     <div id="wrapper" class="wrap">
+        
         <div class="box">
             <div class="wave -one"></div>
             <div class="wave -two"></div>
@@ -346,7 +393,9 @@
         // Toggle Theme : Light -> Dark
         function toggleTheme() {
             var themeToggle = document.getElementById('wrapper');
+            var searchBar = document.getElementById("searchBarSB");
             themeToggle.classList.toggle("dark-mode");
+            searchBar.classList.toggle("dark-mode");
         }
 
         navBarToggle.addEventListener('click', function () {

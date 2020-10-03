@@ -5,11 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index"
+    "start": "nodemon index"
   },
   "author": "Shubham Jha",
   "license": "ISC",
   "dependencies": {
+    "discord.js": "^12.3.1",
+    "dotenv": "^8.2.0",
     "requests": "^0.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
